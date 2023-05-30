@@ -26,20 +26,20 @@
     }
 
     input[type="submit"] {
-      background-color: #ee0014;
-      color: white;
+      background-color: #ff0000;
+      color: rgb(73, 72, 72);
       padding: 10px 20px;
       border: none;
       cursor: pointer;
     }
 
     input[type="submit"]:hover {
-      background-color: #ee0014'"";
+      background-color: #ff0000;
     }
   </style>
 </head>
 <body>
-  <form>
+  <form id="cadastroForm">
     <h2>Cadastro</h2>
 
     <label for="nome">Nome:</label>
@@ -53,5 +53,15 @@
 
     <input type="submit" value="Cadastrar">
   </form>
+
+  <script>
+    document.getElementById("cadastroForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+      var nome = document.getElementById("nome").value;
+      var email = document.getElementById("email").value;
+      var senha = document.getElementById("senha").value;
+
+    });
+  </script>
 </body>
 </html>
